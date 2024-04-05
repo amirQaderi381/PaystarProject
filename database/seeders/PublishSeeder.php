@@ -20,16 +20,10 @@ class PublishSeeder extends Seeder
     {
         User::insert([
             [
-                'firstname' => 'Panel',
-                'lastname' => 'Admin',
-                'email' => 'admin@email.com',
-                'password' => Hash::make('admin'),
-            ],
-            [
                 'firstname' => 'amir',
                 'lastname' => 'qaderi',
-                'email' => 'testuser@email.com',
-                'password' => Hash::make('testpassword'),
+                'email' => 'amir@email.com',
+                'password' => Hash::make('12345678'),
             ]
         ]);
 
@@ -37,7 +31,7 @@ class PublishSeeder extends Seeder
         BankInfo::create([
             'user_id' => 1,
             'card_number' => '6219861906974281',
-            'bank_name' => 'ملت',
+            'bank_name' => 'سامان',
         ]);
 
         Product::factory(5)->create();
